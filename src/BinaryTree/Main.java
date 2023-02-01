@@ -5,11 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Node data = createData();
 
-        //preOrderTraversal(data);
-        //postOrderTraversal(data);
-        inOrderTraversal(data);
     }
 
     public static void preOrderTraversal(Node n) {

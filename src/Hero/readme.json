@@ -1,0 +1,16 @@
+{
+  "name": "John",
+  "education": [
+    {
+      "from": 2000,
+      "to": 2004,
+      "institution": "School 1"
+    },
+    {
+      "from": 2004,
+      "to": 2007,
+      "institution": "School 2"
+    }
+  ]
+
+}

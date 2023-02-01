@@ -8,17 +8,17 @@ import java.util.stream.IntStream;
 
 public class LongestPalindromicSubString {
     public static void main(String[] args) {
-        //String input = "cbbd";
-        //System.out.println(longestPalidrone(input));
-       // pal("bananas");
+        String str1 = "h";
+        String str2 = "h";
+        String str3 = new String("h");;
 
-        List<Integer> int_list = Arrays.stream(new Integer[]{1,3,6,4,1,2}).sorted((val1, val2) -> val1 - val2).collect(Collectors.toList());
-//
-//        List<Integer> result = new ArrayList<Integer>
+        System.out.println(str1.equals(str3));
 
-        System.out.println();
 
     }
+
+
+
 
 
 
@@ -57,15 +57,6 @@ public class LongestPalindromicSubString {
 
         return "";
     }
-
-
-
-
-
-
-
-
-
 
 
 

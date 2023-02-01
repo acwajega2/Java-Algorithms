@@ -81,6 +81,11 @@ public class Algorithms {
         int maxAvg = 0;
 
 
+        studentTotalMarks.forEach((key, value) -> {
+
+        });
+
+
         for (Map.Entry<String, Integer> entry : studentTotalMarks.entrySet()) {
             String nm = entry.getKey();
             int sum = entry.getValue();

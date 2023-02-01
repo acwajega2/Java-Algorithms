@@ -1,26 +1,75 @@
 package NumberOfCandies;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(1);
-        numbers.add(-3);
-        numbers.add(6);
-        numbers.add(90);
-        numbers.add(1);
-        numbers.add(3);
-        numbers.add(1);
-        numbers.add(10);
-        numbers.add(0);
-        numbers.add(0);
+//        ArrayList<Integer> numbers = new ArrayList<Integer>();
+//        numbers.add(1);
+//        numbers.add(-3);
+//        numbers.add(6);
+//        numbers.add(90);
+//        numbers.add(1);
+//        numbers.add(3);
+//        numbers.add(1);
+//        numbers.add(10);
+//        numbers.add(0);
+//        numbers.add(0);
+//
+//        System.out.println(max_candy(numbers));
 
-        System.out.println(max_candy(numbers));
-        // candy(numbers);
+
+            /***
+             * We are provided with a junk String, we need to perform the following task
+             *
+             * 1. Get all email addresses
+             * 2. Get All Zip codes
+             * 3. Get All Valid phone numbers
+             * 4. Get the Shortest word
+             * 6. Get the longest_word
+             * 7. Change all words to upper case
+             * 8. Change all words to lower case
+             * 9. Search for a certain phrase
+             *
+             *
+             */
+
+
+        String junkString ="chris wajeha  Ruke chris@gmail.com 0772123017 +in256 245 red";
+
+        System.out.println("Display only words");
+        System.out.println(performRegex("[a-zA-Z]\\S+",junkString));
+
+
+
+        System.out.println("Display only NUMBERS");
+        System.out.println(performRegex("\\s+\\+[0-9]{3}+",junkString));
+
+        System.out.println("Display only Email Addreses");
+        System.out.println(performRegex("[A-Za-z0-9._%]+@[A-Za-z0-9._]+\\.[A-Za-z]{2,4}",junkString));
+
+
     }
 
+    public static List<String> performRegex(String reg,String str2Check){
+        List<String> result = new ArrayList<String>();
+        Pattern pattern = Pattern.compile(reg);
+        Matcher matcher = pattern.matcher(str2Check);
+
+        while (matcher.find()){
+            if (matcher.group().length() !=0){
+                result.add(matcher.group().trim());
+            }
+        }
+
+
+        return result;
+
+    }
 
     public static int max_candy(ArrayList<Integer> numbers) {
 //        if (numbers == null) return 0;

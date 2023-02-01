@@ -1,6 +1,7 @@
 package codeChallenge;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class play {
@@ -14,7 +15,8 @@ public class play {
     seq of size n return then n numbers of the seq
      */
     public static void main(String[] args) {
-        System.out.println(phen_seq(10));
+        String str = "IOException|The file requested does not exist";
+        System.out.println(Arrays.asList(str.split("\\|")));
     }
 
 

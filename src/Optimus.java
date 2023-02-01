@@ -49,7 +49,7 @@ public class Optimus {
 
 
         String xmen = "THis is us now!";
-        List<String> resultsss = Arrays.stream(xmen.split(" ")).map(x -> x.toUpperCase()).collect(Collectors.toList());
+        List<String> resultsss = Arrays.stream(xmen.split(" ")).map(String::toUpperCase).collect(Collectors.toList());
         System.out.println(resultsss);
 
 

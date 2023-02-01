@@ -56,7 +56,6 @@ public class ShortestPath {
             for (int x = 0; x < 5; x++) {
                 if (!b[x] && graph[u][x] != 0 && dist[u] != Integer.MAX_VALUE && dist[u] + graph[u][x] < dist[x]) {
                     dist[x] = dist[u] + graph[u][x];
-
                 }
             }
             printGraph(dist,5);
